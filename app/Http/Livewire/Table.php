@@ -52,10 +52,51 @@ class Table extends Component
                 $card->code = '10' . $suit;        
             } 
         }
+        // var_dump($deck[51], $deck[50], $deck[49]);
 
-        $burn = [];
+        //array_slice to get positions ; array_slice($deck, offset(negative number starts at the end), amount of cards to return)
+        $row_1 = $deck[0];
 
-        return view('livewire.table')->with(['deck' => $deck, 'burn' => $burn]);
+        $row_2 = array_slice($deck, 1, 2);
+
+        $row_3 = array_slice($deck, 2, 3);
+
+        $row_3 = array_slice($deck, 3, 4);
+
+        $row_4 = array_slice($deck, 4, 5);
+
+        $row_5 = array_slice($deck, 5, 6);
+
+        $row_6 = array_slice($deck, 6, 7);
+
+        $row_7 = array_slice($deck, 7, 8);
+
+        $row_8 = array_slice($deck, -17, 6);
+
+        $row_9 = array_slice($deck, -12, 5);
+
+        $row_10 = array_slice($deck, -8, 4);
+
+        $row_11 = array_slice($deck, -5, 3);
+
+        $row_12 = array_slice($deck, -3, 2);
+
+        $row_13 = array_slice($deck, -1, 1);
+
+        return view('livewire.table')->with(['row_1' => $row_1,
+                                             'row_2' => $row_2,
+                                             'row3' => $row_3,
+                                             'row4' => $row_4,
+                                             'row5' => $row_5,
+                                             'row6' => $row_6,
+                                             'row7' => $row_7,
+                                             'row8' => $row_8,
+                                             'row9' => $row_9,
+                                             'row10' => $row_10,
+                                             'row11' => $row_11,
+                                             'row12' => $row_12,
+                                             'row13' => $row_13,
+         ]);
     }
 
     public function draw()
