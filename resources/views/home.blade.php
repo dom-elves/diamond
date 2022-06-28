@@ -16,6 +16,8 @@
 
         <livewire:table /> 
 
+        
+
     </div>
 
     
