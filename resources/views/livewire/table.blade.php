@@ -6,6 +6,8 @@
 
    <!-- <button onclick="hitMe()">ehkljdrelrwt</button> -->
 
+   <livewire:board /> 
+
     <div class="flex flex-row flex-wrap">
 
         <div>
